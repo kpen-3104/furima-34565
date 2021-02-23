@@ -6,7 +6,7 @@
 | ------------------ | ------- | ------------------------ |
 | nickname           | string  | null: false              |
 | email              | string  | null: false unique: true |
-| password           | string  | null: false unique: true |
+| encrypted_password | string  | null: false unique: true |
 | first_name         | string  | null: false              |
 | last_name          | string  | null: false              |
 | first_name_reading | string  | null: false              |
@@ -56,12 +56,12 @@
 
 | Column          | Type      | Options                      |
 | --------------- | --------- | ---------------------------- |
-| postal_code     | integer   | null: false                  |
-| prefecture      | string    | null: false                  |
+| postal_code     | string    | null: false                  |
+| prefecture_id   | integer   | null: false                  |
 | city            | string    | null: false                  |
 | house_number    | integer   | null: false                  |
-| building_name   | string    | null: false                  |
-| phone_number    | integer   | null: false                  |
+| building_name   | string    |                              |
+| phone_number    | string    | null: false                  |
 | purchase        | reference | null: false foreign_key :true|
 
 
