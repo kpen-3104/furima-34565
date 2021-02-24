@@ -5,8 +5,8 @@
 | Column             | Type    | Options                  |
 | ------------------ | ------- | ------------------------ |
 | nickname           | string  | null: false              |
-| email              | string  | null: false unique: true |
-| encrypted_password | string  | null: false unique: true |
+| email              | string  | null: false              |
+| encrypted_password | string  | null: false              |
 | first_name         | string  | null: false              |
 | last_name          | string  | null: false              |
 | first_name_reading | string  | null: false              |
@@ -20,15 +20,15 @@
 
 ## items テーブル
 
-| Column              | Type      | Options                      |
+| Column              | Type      | Options                       |
 | ------------------- | ---------- | ---------------------------- |
 | item_name           | string     | null: false                  |
 | item_description    | text       | null: false                  |
-| category_id         | integer    | null: false                 |
-| item_condition_id   | integer    | null: false                 |
-| delivery_fee_id     | integer    | null: false                 |
-| shipping_area_id    | integer    | null: false                 |
-| day_to_ship_id      | integer    | null: false                 |
+| category_id         | integer    | null: false                  |
+| item_condition_id   | integer    | null: false                  |
+| delivery_fee_id     | integer    | null: false                  |
+| shipping_area_id    | integer    | null: false                  |
+| day_to_ship_id      | integer    | null: false                  |
 | item_price          | integer    | null: false                  |
 | user                | reference  | null: false foreign_key :true|
 
