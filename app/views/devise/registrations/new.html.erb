@@ -1,6 +1,7 @@
 <%= render "shared/second-header"%>
 
 
+
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 
 <div class='form-wrap'>
@@ -9,11 +10,8 @@
       会員情報入力
     </h1>
   </div>
-
-  <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-  <%# render 'shared/error_messages', model: f.object %>
-  <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-
+  
+  <%= render 'shared/error_messages', model: f.object %>
 
   <div class="form-group">
     <div class='form-text-wrap'>
