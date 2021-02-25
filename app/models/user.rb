@@ -14,5 +14,7 @@ class User < ApplicationRecord
     validates :birthday
 
   end
+  validates :password, format: {with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i}
+   
  
 end
