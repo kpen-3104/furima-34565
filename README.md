@@ -30,7 +30,7 @@
 | shipping_area_id    | integer    | null: false                  |
 | day_to_ship_id      | integer    | null: false                  |
 | item_price          | integer    | null: false                  |
-| user                | reference  | null: false foreign_key :true|
+| user                | references  | null: false foreign_key: true|
 
 
 ### Association
@@ -42,8 +42,8 @@
 
 | Column              | Type      | Options                      |
 | ------------------- | --------- | ---------------------------- |
-| user                | reference | null: false foreign_key :true|
-| item                | reference | null: false foreign_key :true|
+| user                | references | null: false foreign_key: true|
+| item                | references | null: false foreign_key: true|
 
 ### Association
 
@@ -62,7 +62,7 @@
 | house_number    | integer   | null: false                  |
 | building_name   | string    |                              |
 | phone_number    | string    | null: false                  |
-| purchase        | reference | null: false foreign_key :true|
+| purchase        | references | null: false foreign_key: true|
 
 
 ### Association
