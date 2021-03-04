@@ -9,7 +9,7 @@ RSpec.describe OrderAddress, type: :model do
       sleep(0.1)
     end
     context '購入情報をテーブルに保存できる時' do
-      it '全ての値が正しく入力されていれば購入情報を保存できる' do
+      it 'tokenと配送先情報が正しく入力されていれば購入情報を保存できる' do
         expect(@order_address).to be_valid
       end
       it '建物名が未入力でも購入情報を保存できる' do
@@ -53,6 +53,11 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.phone_number = "090111122223"
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number is too long (maximum is 11 characters)")
+      end
+      it 'tokenが空では保存できない' do
+        @order_address.token = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Token can't be blank")
       end
     end
   end
